@@ -4,6 +4,7 @@ import java.io.*;
 
 public class Calculadora {
 	/*Atributos de la clase*/
+	private static Calculadora firstInstance = null; //para usar en el patron Singleton
 	private StackVector<Integer> data;
 	private String car;
 	private int operando1,operando2,resultado;
@@ -12,7 +13,7 @@ public class Calculadora {
 	/**
 	 * Constuctor de la clase
 	 */
-	public Calculadora() {
+	private Calculadora() {
 		data = new StackVector<Integer>();
 		car="";
 		operando1=0;
@@ -20,7 +21,16 @@ public class Calculadora {
 		resultado=0;
 	}
 
-
+	
+	//uso del patron Singleton
+	public static Calculadora getInstance(){
+		if (firstInstance == null){
+			firstInstance = new Calculadora();
+		}
+		return firstInstance;
+	}
+	
+	
 	/**
 	 * Metodo que muestra el resultado de la operacion en el archivo .txt
 	 */
