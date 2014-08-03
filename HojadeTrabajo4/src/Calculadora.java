@@ -5,7 +5,7 @@ import java.io.*;
 public class Calculadora {
 	/*Atributos de la clase*/
 	private static Calculadora firstInstance = null; //para usar en el patron Singleton
-	private StackVector<Integer> data;
+	private StackFactory<E> Factory = new StackFactory<E>();
 	private String car;
 	private int operando1,operando2,resultado;
 	private char aChar;						//Se guarda el caracter que se va a ir leyendo
@@ -14,7 +14,7 @@ public class Calculadora {
 	 * Constuctor de la clase
 	 */
 	private Calculadora() {
-		data = new StackVector<Integer>();
+		Stack <E> data = Factory.getStack("vector");
 		car="";
 		operando1=0;
 		operando2=0;
