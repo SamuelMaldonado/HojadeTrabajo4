@@ -1,24 +1,24 @@
-import java.util.List;
 
 
 public class StackList<E> extends AbstractStack<E> {
 
-	protected List<E> data;
+	private List<E> data;
 	
 	public StackList(){
-		data = new List<E>();
+		ListFactory<E> factory = new ListFactory<E>();
+		data = factory.getList();
 	}
 	
 	public void push(E item){
-		data.add(item);
+		data.addFirst(item);
 	}
 	
 	public E pop(){
-		return data.remove(size()-1);
+		return data.removeFirst();
 	}
 	
 	public E peek(){
-		return data.get(size()-1);
+		return data.getFirst();
 	}
 	
 	public int size(){

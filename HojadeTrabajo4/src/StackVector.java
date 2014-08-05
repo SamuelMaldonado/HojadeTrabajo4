@@ -11,7 +11,8 @@ public class StackVector<E> extends AbstractStack<E> {
      * Constructor
      */
     public StackVector(){
-        data = new Vector<E>();
+    	StackFactory<E> factory = new StackFactory<E>();
+        data = (Vector<E>) factory.getStack();
     }
     
     /* (non-Javadoc)

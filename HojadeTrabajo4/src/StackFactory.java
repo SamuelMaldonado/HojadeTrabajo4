@@ -1,15 +1,23 @@
 
-public class StackFactory<E> {
+import java.util.Scanner;
 
-	public Stack<E> getStack(String implementacion){
+public class StackFactory<E> {
+	private Stack<E> hola;
+	public Stack<E> getStack(){
+		Scanner scan = new Scanner(System.in);
+		String implementacion = scan.next();
 		
-		if (implementacion.equals("vector"))
-			return new StackVector<E>();
-		
-		if (implementacion.equals("arraylist"))
-			return new StackArrayList<E>();
-		
-		//if (implementacion.equals("list"))
-			return new StackList<E>();
+		switch(implementacion){
+		case "vector":
+			hola = new StackVector<E>();
+			break;
+		case "arraylist":
+			hola = new StackArrayList<E>();
+			break;
+		case "list":
+			hola = new StackList<E>();
+			break;
+		}
+		return hola;
 	}
 }

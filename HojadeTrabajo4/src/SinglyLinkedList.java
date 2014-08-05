@@ -9,25 +9,14 @@ public class SinglyLinkedList<E> extends AbstractList<E>{
       head = null;
       count = 0;
    }	
-  public void addLast(E value)
-  // post: adds value to end of list
-  {
-      // location for new value
-      Node<E> temp = new Node<E>(value,null);
-      if (head != null)
-     {
-         // pointer to possible tail
-         Node<E> finger = head;
-         while (finger.next() != null)
-         {
-                finger = finger.next();
-         }
-		 
-         finger.setNext(temp);
-      } else head = temp;
-	  
-	  count++;
-	  
+   
+   public void addFirst(E value)
+   // post: value is added to beginning of list
+   {
+      // note order that things happen:
+      // head is parameter, then assigned
+      head = new Node<E>(value, head);
+      count++;
    }
 
   public E removeFirst(){

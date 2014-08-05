@@ -12,14 +12,14 @@ public class DoubleLinkedList<E> extends AbstractList<E>{
 	   count = 0;
 	}
 	
-	public void addLast(E value)
+	public void addFirst(E value)
 	// pre: value is not null
-	// post: adds new value to tail of list
+	// post: adds element to head of list
 	{
-	   // construct new element
-	   tail = new DoubleNode<E>(value, null, tail);
-	   // fix up head
-	   if (head == null) head = tail;
+	   // construct a new element, making it head
+	   head = new DoubleNode<E>(value, head, null);
+	   // fix tail, if necessary
+	   if (tail == null) tail = head;
 	   count++;
 	}
 	

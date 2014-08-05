@@ -1,6 +1,6 @@
 public interface List<E> {
 	
-	   public void addLast(E value);	//equivalente al push de un stack
+	   public void addFirst(E value);	//equivalente al push de un stack
 	   // post: value is added to end of list
 	
 	   public E removeFirst();			//equivalente al pop de un stack pero del primer elemento en la lista

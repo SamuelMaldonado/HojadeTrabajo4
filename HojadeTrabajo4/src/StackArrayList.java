@@ -8,7 +8,8 @@ public class StackArrayList<E> extends AbstractStack<E>{
 	public StackArrayList()
 	// post: constructs a new, empty stack
 	{
-		data = new ArrayList<E>();
+		StackFactory<E> factory = new StackFactory<E>();
+		data = (ArrayList<E>) factory.getStack();
 	}
 
 	public void push(E item)
