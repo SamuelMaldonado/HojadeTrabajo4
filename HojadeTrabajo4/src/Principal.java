@@ -1,7 +1,7 @@
   // TODO: Auto-generated Javadoc
 /*
    * Universidad del Valle de Guatemala.
-   * Seccion: 21 	HOJA DE TRABAJO 4
+   * Seccion: 30 	HOJA DE TRABAJO 4
    * @author Max de Leon Carne: 13012
    * @author Samuel Maldonado Carne:13153
    * Principal: Programa principal de la calculadora
