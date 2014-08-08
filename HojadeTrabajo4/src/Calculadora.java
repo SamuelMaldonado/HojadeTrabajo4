@@ -2,17 +2,35 @@
 import java.io.*;
 import java.util.*;
 
+
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Calculadora.
+ *
+ * @param <E> the element type
+ */
 public class Calculadora<E>{
 	/*Atributos de la clase*/
+	/** The first instance. */
 	private static Calculadora firstInstance = null; //para usar en el patron Singleton
+	
+	/** The Factory. */
 	private StackFactory<Integer> Factory = new StackFactory<Integer>();
+	
+	/** The data. */
 	private Stack<Integer> data;
+	
+	/** The car. */
 	private String car;
+	
+	/** The resultado. */
 	private int operando1,operando2,resultado;
+	
+	/** The a char. */
 	private char aChar;						//Se guarda el caracter que se va a ir leyendo
 
 	/**
-	 * Constuctor de la clase
+	 * Constuctor de la clase.
 	 */
 	private Calculadora() {
 		data = Factory.getStack();
@@ -24,7 +42,13 @@ public class Calculadora<E>{
 
 
 	//uso del patron Singleton
-	public static Calculadora getInstance(){
+
+    /**
+	 * Gets the single instance of Calculadora.
+	 *
+	 * @return single instance of Calculadora
+	 */
+    	public static Calculadora getInstance(){
 		if (firstInstance == null){
 			firstInstance = new Calculadora();
 		}
@@ -105,7 +129,12 @@ public class Calculadora<E>{
 
 	}
         
-        public int getResultado(){		//devuelve el resultado final, se usa para la prueba unitaria
+    /**
+     * Gets the resultado.
+     *
+     * @return the resultado
+     */
+    public int getResultado(){		//devuelve el resultado final, se usa para la prueba unitaria
             return resultado;
         }
 }

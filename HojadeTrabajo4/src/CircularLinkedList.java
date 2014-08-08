@@ -1,9 +1,23 @@
+
+/**
+ * The Class CircularLinkedList.
+ *
+ * @param <E> the element type
+ */
 public class CircularLinkedList<E> extends AbstractList<E>{
 	
+	/** The tail. */
 	protected Node<E> tail; 
+	
+	/** The count. */
 	protected int count;
+	
+	/** The head. */
 	protected Node<E> head;
 	
+	/**
+	 * Instantiates a new circular linked list.
+	 */
 	public CircularLinkedList()
 	// pre: constructs a new circular list
 	{
@@ -11,6 +25,9 @@ public class CircularLinkedList<E> extends AbstractList<E>{
 	   count = 0;
 	}
 	
+	/* (non-Javadoc)
+	 * @see List#addFirst(java.lang.Object)
+	 */
 	public void addFirst(E value)		//es necesario para el addLast
 	// pre: value non-null
 	// post: adds element to head of list
@@ -27,6 +44,11 @@ public class CircularLinkedList<E> extends AbstractList<E>{
 	}
 	
 	
+	/**
+	 * Adds the last.
+	 *
+	 * @param value the value
+	 */
 	public void addLast(E value)
 	// pre: value non-null
 	// post: adds element to tail of list
@@ -37,6 +59,9 @@ public class CircularLinkedList<E> extends AbstractList<E>{
 	}
 	
 	
+	/* (non-Javadoc)
+	 * @see List#removeFirst()
+	 */
 	public E removeFirst()
 	// pre: !isEmpty()
 	// post: returns and removes value from tail of list
@@ -47,6 +72,9 @@ public class CircularLinkedList<E> extends AbstractList<E>{
 	    return temp.value();
 	}
 	
+	/* (non-Javadoc)
+	 * @see List#getFirst()
+	 */
 	public E getFirst()
 	// pre: list is not empty
 	// post: returns first value in list
@@ -54,6 +82,9 @@ public class CircularLinkedList<E> extends AbstractList<E>{
 	    return head.value();
 	}
 	
+	/* (non-Javadoc)
+	 * @see List#size()
+	 */
 	public int size()
 	// post: returns number of elements in list
 	{

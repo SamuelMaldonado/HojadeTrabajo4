@@ -1,22 +1,37 @@
 import java.util.Scanner;
 
+// TODO: Auto-generated Javadoc
+/**
+ * A factory for creating List objects.
+ *
+ * @param <E> the element type
+ */
 public class ListFactory<E> {
-	private List<E> hola;
+	
+	/** The implementa. */
+	private List<E> implementa;
+	
+	/**
+	 * Gets the list.
+	 *
+	 * @return the list
+	 */
 	public List<E> getList(){
+		System.out.println("Ingrese si quiere lista: simple, doble o circular");
 		Scanner scan = new Scanner(System.in);
 		String implementacion = scan.next();
 		
 		switch(implementacion){
 		case "simple":
-			hola = new SinglyLinkedList<E>();
+			implementa = new SinglyLinkedList<E>();
 			break;
 		case "doble":
-			hola = new DoubleLinkedList<E>();
+			implementa = new DoubleLinkedList<E>();
 			break;
 		case "circular":
-			hola = new CircularLinkedList<E>();
+			implementa = new CircularLinkedList<E>();
 			break;
 		}
-		return hola;
+		return implementa;
 	}
 }

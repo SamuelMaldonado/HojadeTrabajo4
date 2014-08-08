@@ -1,9 +1,23 @@
+// TODO: Auto-generated Javadoc
+/**
+ * The Class DoubleLinkedList.
+ *
+ * @param <E> the element type
+ */
 public class DoubleLinkedList<E> extends AbstractList<E>{
 	
+	/** The count. */
 	protected int count;
+	
+	/** The head. */
 	protected DoubleNode<E> head;
+	
+	/** The tail. */
 	protected DoubleNode<E> tail;
 	
+	/**
+	 * Instantiates a new double linked list.
+	 */
 	public DoubleLinkedList()
 	// post: constructs an empty list
 	{
@@ -12,6 +26,9 @@ public class DoubleLinkedList<E> extends AbstractList<E>{
 	   count = 0;
 	}
 	
+	/* (non-Javadoc)
+	 * @see List#addFirst(java.lang.Object)
+	 */
 	public void addFirst(E value)
 	// pre: value is not null
 	// post: adds element to head of list
@@ -24,6 +41,9 @@ public class DoubleLinkedList<E> extends AbstractList<E>{
 	}
 	
 	
+	/* (non-Javadoc)
+	 * @see List#removeFirst()
+	 */
 	public E removeFirst()
 	// pre: list is not empty
 	// post: removes value from tail of list
@@ -34,6 +54,9 @@ public class DoubleLinkedList<E> extends AbstractList<E>{
 	   return temp.value();
 	}
 	
+	/* (non-Javadoc)
+	 * @see List#getFirst()
+	 */
 	public E getFirst()
 	// pre: list is not empty
 	// post: returns first value in list
@@ -41,6 +64,9 @@ public class DoubleLinkedList<E> extends AbstractList<E>{
 	    return head.value();
 	}
 	
+	/* (non-Javadoc)
+	 * @see List#size()
+	 */
 	public int size()
 	// post: returns number of elements in list
 	{

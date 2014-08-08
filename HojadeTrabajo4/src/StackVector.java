@@ -1,14 +1,19 @@
 
 import java.util.Vector;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class StackVector.
+ *
+ * @param <E> the element type
+ */
 public class StackVector<E> extends AbstractStack<E> {
-    /**
-     * Atributos de la pila
-     */
+    
+    /** Atributos de la pila. */
     protected Vector<E> data;
     
     /**
-     * Constructor
+     * Constructor.
      */
     public StackVector(){
     	StackFactory<E> factory = new StackFactory<E>();
